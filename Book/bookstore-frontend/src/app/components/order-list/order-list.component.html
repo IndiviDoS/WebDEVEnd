@@ -1,0 +1,24 @@
+<h2>Cart</h2>
+<div *ngIf="removalMessage" class="removal-message">{{ removalMessage }}</div>
+<div *ngIf="successMessage" class="success-message">{{ successMessage }}</div>
+
+<div *ngIf="cartItems.length === 0 && !removalMessage && !orderPlaced">
+  <p class="empty">Your cart is empty.</p>
+</div>
+
+<ul *ngIf="cartItems.length > 0 && !orderPlaced">
+  <li *ngFor="let item of cartItems">
+    {{ item.book.title }} - {{ item.book.author }} - Price: {{ item.book.price | currency }} - Quantity: {{ item.quantity }}
+    <button (click)="removeFromCart(item.book.id)">Remove</button>
+  </li>
+</ul>
+
+<div *ngIf="cartItems.length > 0 && !orderPlaced">
+  <p>Total Price: {{ getTotalPrice() | currency }}</p>
+  <button (click)="clearCart()">Clear Cart</button>
+  <button (click)="placeOrder()" class="place-order-button">Place Order</button>
+</div>
+
+<div *ngIf="orderPlaced && successMessage">
+  {{ successMessage }}
+</div>

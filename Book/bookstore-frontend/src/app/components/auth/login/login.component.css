@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to right bottom, #fff8e1, #ffe0b2);
+  color: #6B4226;
+ margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  min-height: 100vh; 
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+form {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(107, 66, 38, 0.2);
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left;
+  margin: auto; 
+}
+
+h2 {
+  text-align: center;
+  color: #6B4226;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+div[ngIf] {
+  color: #e53935;
+  text-align: center;
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+label {
+  display: block;
+  margin-bottom: 0;
+  color: #6B4226;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ffcc80;
+  border-radius: 10px;
+  background-color: #fffaf0;
+  color: #6B4226;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+  margin-bottom: 0;
+}
+
+input:focus {
+  outline: none;
+  border-color: #fdcb41;
+  box-shadow: 0 0 8px rgba(253, 203, 65, 0.4);
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  background-color: #f8bc6e;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(248, 188, 110, 0.3);
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #fdcb41;
+  box-shadow: 0 8px 20px rgba(253, 203, 65, 0.4);
+}
+
+button:active {
+  background-color: #f7a13d;
+  box-shadow: 0 3px 10px rgba(247, 161, 61, 0.4);
+  transform: translateY(2px);
+}
+
+form > *:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+input[type="password"] {
+  margin-bottom: 30px;
+}
+
+@media (max-width: 480px) {
+  form {
+      padding: 30px;
+      gap: 15px;
+  }
+  h2 {
+      font-size: 24px;
+      margin-bottom: 8px;
+  }
+  input {
+      padding: 10px 12px;
+      font-size: 15px;
+  }
+  button {
+      padding: 12px;
+      font-size: 16px;
+      margin-top: 5px;
+  }
+  label {
+    font-size: 14px;
+  }
+}

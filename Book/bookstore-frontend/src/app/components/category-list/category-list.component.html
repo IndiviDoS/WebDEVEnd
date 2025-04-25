@@ -1,0 +1,5 @@
+<h2>Список категорий</h2>
+<div *ngIf="errorMessage">{{ errorMessage }}</div>
+<ul>
+  <li *ngFor="let category of categories">{{ category.name }}</li>
+</ul>

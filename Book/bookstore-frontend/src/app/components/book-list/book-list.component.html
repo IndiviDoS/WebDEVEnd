@@ -1,0 +1,20 @@
+<div class="list-container">
+    <h2>Book List</h2>
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+  
+    <ul class="book-list" *ngIf="books.length > 0">
+      <li *ngFor="let book of books" class="book-item">
+        <a [routerLink]="['/book', book.id]">
+          <span class="book-title">{{ book.title }}</span>
+        </a>
+        <span class="book-author">Author: {{ book.author }}</span>
+        <span class="book-price">Price: {{ book.price | currency }}</span>
+        <span class="book-category">Category: {{ book.category?.name }}</span>
+        <button (click)="viewBookDetails(book.id)">View Details</button>
+      </li>
+    </ul>
+  
+    <div *ngIf="books.length === 0 && !errorMessage" class="loading-message">
+      No books available.
+    </div>
+  </div>

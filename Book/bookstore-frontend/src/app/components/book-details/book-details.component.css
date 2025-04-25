@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+*{
+  font-family: 'Montserrat', sans-serif;
+}
+.details-container {
+  max-width: 60%;
+  margin: 50px auto;
+  padding: 40px;
+    background: linear-gradient(to right top, lab(100% 0.01 -0.01), #ffe3a5 );
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    color: #6B4226 ;
+  }
+  
+  .details-container h2 {
+    text-align: center;
+    color: #6B4226;
+    margin-bottom: 20px;
+  }
+  
+  .error-message {
+    background-color: #ffcccb;
+    color: #b71c1c;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .book-card {
+    background-color: #ffffff;
+    border: 1px solid #ffb482;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+  }
+  
+  .book-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .book-card h3 {
+    margin-top: 0;
+    color: #6B4226;
+  }
+  
+  .book-card p {
+    margin: 10px 0;
+    line-height: 1.6;
+  }
+  
+  .book-card button {
+    background-color: #f8bc6e;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .book-card button:hover {
+    background-color: #fca93d;
+  }
+  
+  .loading-message {
+    text-align: center;
+    color: #6B4226;
+    font-style: italic;
+  }
+  

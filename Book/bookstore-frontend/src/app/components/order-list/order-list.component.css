@@ -1,0 +1,113 @@
+h2 {
+    text-align: center;
+    color: #6B4226;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .removal-message,
+  .success-message {
+    text-align: center;
+    font-weight: bold;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+  }
+  .empty{
+    color: #fc9e60;
+    font-size: 20px;
+    font-style: italic;
+  }
+  .removal-message {
+    background-color: #ffc59f;
+    color: #6B4226;
+  }
+  
+  .success-message {
+    background-color: #ffc59f;
+    color: #ff954f;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 700px;
+  }
+  
+  li {
+    background-color: #ffffff;
+    border: 1px solid #6B4226;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0 2px 6px rgba(255, 181, 84, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: #6B4226;
+  }
+  
+  li button {
+    align-self: flex-start;
+    background-color: #f8bc6e;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  li button:hover {
+    background-color: #f59d2a;
+  }
+  
+  p {
+    font-size: 16px;
+    color: #6B4226;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  button {
+    background-color: #f8bc6e;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    margin: 10px 10px 0 0;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    display: inline-flex;
+  }
+  
+  button:hover {
+    background-color: #f59d2a;
+  }
+  
+  .place-order-button {
+    background-color: #a87426;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    margin: 10px 0;
+  }
+  
+  .place-order-button:hover {
+    background-color: #d49536;
+  }
+  
+  div[ng-reflect-ng-if="true"]:not(.success-message):not(.removal-message) {
+    text-align: center;
+    font-style: italic;
+    color: #6B4226;
+    margin-top: 20px;
+  }
+  

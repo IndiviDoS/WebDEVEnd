@@ -1,0 +1,44 @@
+<div class="list-container">
+  <h2>Order History</h2>
+
+  <div *ngIf="orders.length === 0 && !errorMessage" class="loading-message">
+    Loading order history...
+  </div>
+   <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+   <div *ngIf="showNoCompletedOrdersMessage && !errorMessage" class="loading-message">
+     No completed orders with items found.
+   </div>
+
+
+  <div class="order-list-container">
+    <div *ngFor="let order of orders">
+      <div *ngIf="order.order_items && order.order_items.length > 0" class="order-item">
+
+        <div class="order-header">
+          <h3 class="order-id"><strong>Order #{{ order.id }}</strong></h3>
+           <p class="order-date"><strong>Date:</strong> {{ order.order_date | date:'medium' }}</p>
+        </div>
+
+        <div class="order-items-section">
+             <h4>Books:</h4>
+             <ul class="order-items-list">
+               <li *ngFor="let item of order.order_items" class="order-item-detail">
+                 <span class="item-quantity-title">{{ item.quantity }} x {{ item.book.title }} ({{ item.book.author }})</span>
+                 <span class="item-price-info"> ${{ item.book.price | number:'1.2-2' }}</span>
+                 </li>
+             </ul>
+        </div>
+
+        <div class="order-footer">
+            <p class="order-total"><strong>Order Total:</strong> ${{ order.total_price | number:'1.2-2' }}</p>
+        </div>
+
+        <hr class="order-separator">
+      </div>
+      </div>
+  </div>
+   <div *ngIf="showNoCompletedOrdersMessage && !errorMessage" class="loading-message">
+     No completed orders with items found.
+   </div>
+
+</div>

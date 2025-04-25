@@ -1,0 +1,26 @@
+
+<div class="homepage">
+    <h1>Welcome to CozyShelf!</h1>
+  
+    <section class="project-info" id="project-info">
+      <p class="main-word">Find yourself a Great Book from our Bookshelf</p>
+    </section>
+    <section class="project-info">
+      <h2>About Our Webpage</h2>
+      <p>{{ projectInfo }}</p>
+      <h3>Webpage includes Features like:</h3>
+      <ul>
+        <li *ngFor="let feature of websiteFeatures">{{ feature }}</li>
+      </ul>
+    </section>
+  
+    <section class="creators-info">
+      <h2>About Us:</h2>
+      <p>{{ creatorsInfo }}</p>
+      <div class="creator" *ngFor="let creator of creators">
+        <h3>{{ creator.name }}</h3>
+        <p>{{ creator.contribution }}</p>
+      </div>
+    </section>
+  </div>
+  

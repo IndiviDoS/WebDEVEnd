@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+/* Apply Montserrat to all elements for consistency */
+* {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box; /* Added for better padding/border handling */
+}
+
+body {
+    /* Updated background gradient to warm tones */
+    background: linear-gradient(to right bottom, #fff8e1, #ffe0b2); /* Light cream to soft peach */
+    /* Applied the new font color */
+    color: #6B4226; /* Dark Brown */
+    margin: 0;
+    padding: 20px; /* Added some padding for smaller screens */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Use min-height to ensure it takes full height but allows scrolling */
+    /* Removed duplicate and conflicting font-family */
+}
+
+/* Removed .form-container as display: flex on body handles centering */
+/* .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+} */
+
+form {
+    background-color: #ffffff;
+    padding: 40px; /* Increased padding */
+    border-radius: 20px; /* Increased border-radius for softer corners */
+    /* Adjusted box-shadow color to complement the new theme */
+    box-shadow: 0 15px 30px rgba(107, 66, 38, 0.2); /* Shadow based on the new font color */
+    width: 100%; /* Make width responsive */
+    max-width: 380px; /* Set a max-width for larger screens */
+    text-align: left; /* Align form content to the left */
+}
+
+h2 {
+    text-align: center;
+    /* Adjusted heading color */
+    color: #6B4226; /* Using the main font color */
+    margin-bottom: 30px; /* Increased margin */
+    font-weight: 700; /* Make heading bold */
+}
+
+div[ngIf] {
+    color: #e53935; /* Kept a clear red for error messages */
+    text-align: center;
+    margin-bottom: 20px; /* Increased margin */
+    font-size: 14px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px; /* Increased margin */
+    /* Adjusted label color */
+    color: #6B4226; /* Using the main font color */
+    font-weight: 600; /* Semi-bold weight */
+    font-size: 15px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 15px; /* Increased padding */
+    margin-bottom: 25px; /* Increased margin */
+    /* Adjusted border and background colors */
+    border: 1px solid #ffcc80; /* Light Orange/Brown */
+    border-radius: 10px; /* Increased border-radius */
+    background-color: #fffaf0; /* Very light Orange/Cream */
+    color: #6B4226; /* Ensure input text color fits the theme */
+    transition: border-color 0.3s ease;
+    font-size: 16px;
+}
+
+input:focus {
+    outline: none;
+    /* Adjusted focus border color */
+    border-color: #fdcb41; /* Button hover color */
+    box-shadow: 0 0 8px rgba(253, 203, 65, 0.4); /* Add a subtle focus shadow */
+}
+
+button {
+    width: 100%;
+    padding: 14px; /* Increased padding */
+    /* Applied the new button background color */
+    background-color: #f8bc6e; /* Warm Orange */
+    color: #ffffff; /* Keep text color white for contrast */
+    border: none;
+    border-radius: 10px; /* Increased border-radius */
+    font-size: 17px; /* Increased font size */
+    font-weight: 700; /* Bold weight */
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Add box-shadow to transition */
+    box-shadow: 0 5px 15px rgba(248, 188, 110, 0.3); /* Add initial button shadow */
+}
+
+button:hover {
+    /* Applied the new button hover background color */
+    background-color: #fdcb41; /* Brighter Orange/Yellow */
+    box-shadow: 0 8px 20px rgba(253, 203, 65, 0.4); /* More prominent shadow on hover */
+}
+
+button:active {
+    background-color: #f7a13d; /* Slightly darker orange when clicked */
+    box-shadow: 0 3px 10px rgba(247, 161, 61, 0.4);
+    transform: translateY(2px); /* Push button down slightly when active */
+}
+
+/* Add some spacing between form elements for better layout */
+form > *:not(:last-child) {
+    margin-bottom: 15px; /* Add margin between most direct children of the form */
+}
+
+/* Specific margin for the last input before the button */
+input[type="password"] {
+    margin-bottom: 30px; /* More space before the button */
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    form {
+        padding: 30px;
+    }
+
+    h2 {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        padding: 10px 12px;
+        margin-bottom: 20px;
+    }
+
+    button {
+        padding: 12px;
+        font-size: 16px;
+    }
+}

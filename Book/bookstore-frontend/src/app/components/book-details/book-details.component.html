@@ -1,0 +1,17 @@
+<div class="details-container">
+    <h2>Book Details</h2>
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+  
+    <div *ngIf="book" class="book-card">
+      <h3>{{ book.title }}</h3>
+      <p><strong>Author:</strong> {{ book.author }}</p>
+      <p><strong>Description:</strong> {{ book.description }}</p>
+      <p><strong>Price:</strong> {{ book.price | currency }}</p>
+      <button (click)="addToCart()">Add to Cart</button>
+    </div>
+  
+    <div *ngIf="!book && !errorMessage" class="loading-message">
+      Loading book details...
+    </div>
+  </div>
+  

@@ -1,0 +1,29 @@
+<nav>
+  <a routerLink="/" class="navbar-logo">
+    <img src="logo.png" alt="Bookstore Logo">
+  </a>
+
+  <div class="navbar-center-links">
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+    <a routerLink="/books" routerLinkActive="active">Books</a>
+    <a routerLink="/orders" routerLinkActive="active">Cart</a>
+    <ng-container *ngIf="isAuthenticated$ | async">
+      <a routerLink="/orders" routerLinkActive="active">Cart</a>
+      <a routerLink="/order-history" routerLinkActive="active">Order History</a>
+    </ng-container>
+  </div>
+
+  <div class="navbar-right-controls">
+    <ng-container *ngIf="!(isAuthenticated$ | async)">
+      <a routerLink="/login" routerLinkActive="active">Log in</a>
+      <a routerLink="/register" routerLinkActive="active">Sign in</a>
+    </ng-container>
+    <ng-container *ngIf="isAuthenticated$ | async">
+      <button (click)="logout()">Logout</button>
+    </ng-container>
+  </div>
+</nav>
+
+<main>
+  <router-outlet></router-outlet>
+</main>

@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+* {
+  font-family: 'Montserrat', sans-serif;
+  /* Можно добавить box-sizing сюда для более предсказуемых размеров */
+  /* box-sizing: border-box; */
+}
+
+
+nav {
+    width: 100%;
+    box-sizing: border-box;
+
+    background-color: #d48544;
+    box-shadow: 0 4px 12px rgba(80, 50, 30, 0.3);
+    padding: 15px 25px;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Оставляем gap для пространства между остальными элементами */
+    align-items: center;
+    /* justify-content: center;  <- Это больше не нужно центрировать все */
+    /* Можете оставить justify-content: flex-start; или удалить строку,
+       flex-start - это значение по умолчанию */
+    justify-content: flex-start;
+}
+
+/* Добавляем правило для ссылки логотипа */
+.navbar-logo {
+    /* margin-right: auto; сдвигает все последующие элементы вправо */
+    margin-right: auto;
+    /* Добавляем те же стили для лого, которые были у img, но теперь на ссылку */
+    display: flex; /* Чтобы align-items: center работал для img внутри ссылки */
+    align-items: center;
+    /* Убираем underline */
+    text-decoration: none;
+}
+
+
+.navbar-logo img {
+    height: 80px;
+    /* Убираем margin-right отсюда, он теперь на .navbar-logo */
+    /* margin-right: 40px; */
+    max-height: 100px;
+    width: auto;
+    /* position: relative; - Это свойство здесь, скорее всего, не нужно */
+}
+
+nav .navbar-logo:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    /* background-color: #d48544;  <- Убрал */
+}
+
+nav a {
+    color: #F8F5EE;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: color 0.3s ease, transform 0.2s ease;
+    position: relative;
+    overflow: hidden;
+    /* Убрал margin-right: 15px; если вы используете gap: 15px; на nav */
+    /* margin-right: 15px; */
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #FADE8D;
+    transition: width 0.3s ease;
+    border-radius: 3px;
+}
+
+nav a:hover {
+    color: #F8F5EE;
+    transform: translateY(-2px);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a.active {
+    color: #FADE8D;
+    font-weight: bold;
+}
+
+nav a.active::after {
+    width: 100%;
+    background-color: #FADE8D;
+}
+
+nav span {
+    color: #F8F5EE;
+    font-style: italic;
+    margin-right: 10px; /* Возможно, стоит изменить на gap, если span - прямой потомок nav */
+}
+
+nav button {
+    background-color: #FADE8D;
+    color: #4E433C;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    position: relative;
+    overflow: hidden;
+    /* Убрал margin-left: 15px; если вы используете gap: 15px; на nav */
+    /* margin-left: 15px; */
+}
+.navbar-center-links {
+  display: flex; /* Делает ссылки внутри flex-элементами */
+  align-items: center; /* Выравнивает ссылки по вертикали */
+  gap: 15px; /* Пространство между ссылками внутри этой группы */
+  flex-grow: 1; /* <-- Это заставляет блок с центром ссылок занять все доступное пространство между лого и правым блоком */
+  justify-content: center; /* <-- Это центрирует СОДЕРЖИМОЕ (сами ссылки) внутри этого расширенного блока */
+}
+nav button::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #4E433C;
+    transition: width 0.3s ease;
+    border-radius: 3px;
+}
+nav button:hover {
+    background-color: #F8D46E;
+    transform: translateY(-2px);
+}
+
+nav button:hover::after {
+    width: 100%;
+}
+
+main {
+    padding: 40px 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+.navbar-right-controls .log {
+  background-color: #FADE8D;
+  color: #4E433C;
+}

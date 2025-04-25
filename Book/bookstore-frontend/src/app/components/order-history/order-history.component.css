@@ -1,0 +1,198 @@
+/* src/app/components/order-history/order-history.component.css */
+
+/* Styles for the main container - copied from book-list */
+.list-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 25px;
+    background: linear-gradient(to right, #e1f5fe, #b3e5fc);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 105, 148, 0.2);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #01579b;
+  }
+  
+  /* Styles for the main heading - copied from book-list */
+  .list-container h2 {
+    text-align: center;
+    color: #0288d1;
+    margin-bottom: 25px;
+  }
+  
+  /* Style for error messages - copied from book-list */
+  .error-message {
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  /* Style for the 'No orders found' or 'No completed orders' message - copied from book-list loading message */
+  .loading-message {
+    text-align: center;
+    color: #039be5;
+    font-style: italic;
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+  
+  
+  /* Styles for the container holding all the order blocks */
+  .order-list-container {
+    padding: 0;
+    margin: 0;
+  }
+  
+  
+  /* Styles for each individual order block (div.order-item) - adapted from li.book-item */
+  .order-item {
+    background-color: #ffffff;
+    border: 1px solid #b3e5fc;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 15px; /* Provides spacing between order blocks */
+    box-shadow: 0 2px 6px rgba(2, 119, 189, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  
+    /* Arrange sections (header, items, footer) in a column with gap, like book-item */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between order header, items section, and footer */
+  }
+  
+  .order-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(2, 119, 189, 0.2);
+  }
+  
+  
+  /* --- Styles for Sections within Order Item --- */
+  
+  /* Style for the order header section (ID, Date) */
+  .order-header {
+      display: flex;
+      justify-content: space-between; /* Put ID on left, Date on right */
+      align-items: center;
+      border-bottom: 1px solid #e0e0e0; /* Separator below header */
+      padding-bottom: 10px;
+  }
+  
+  .order-header .order-id {
+      margin: 0; /* Remove default margin */
+      color: #0277bd;
+      font-size: 1.2em;
+  }
+  
+  .order-header .order-date {
+      margin: 0; /* Remove default margin */
+      font-size: 0.9em;
+      color: #01579b;
+  }
+  
+  
+  /* Styles for the Items list section heading */
+  .order-items-section h4 {
+      margin: 0; /* Remove default margin */
+      color: #0288d1;
+      font-size: 1em;
+      margin-bottom: 10px;
+  }
+  
+  
+  /* Styles for the inner list of items (ul.order-items-list) */
+  .order-items-list {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Styles for each individual item detail line (li.order-item-detail) */
+  .order-item-detail {
+    margin-bottom: 10px; /* Space between items */
+    color: #01579b;
+    font-size: 0.9em;
+    border-bottom: 1px dashed #eeeeee; /* Subtle separator between items */
+    padding-bottom: 8px;
+  
+    /* >>> Use flexbox for layout within the item line <<< */
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    justify-content: space-between; /* Put quantity/title on left, price on right */
+    align-items: baseline; /* Align text baselines */
+    gap: 10px; /* Space between the two spans if they wrap */
+  }
+  
+  .order-item-detail:last-child {
+      border-bottom: none; /* No border after the last item */
+      padding-bottom: 0;
+  }
+  
+  
+  /* >>> Styles for the quantity and title span <<< */
+  .item-quantity-title {
+      font-weight: normal; /* Standard weight */
+      color: #01579b; /* Standard color */
+      /* Maybe make quantity bolder within this span if desired */
+      /* .item-quantity-title strong { font-weight: bold; color: #004d40; } */
+      flex-grow: 1; /* Allow this span to take up available space */
+  }
+  
+  /* >>> Styles for the price info span <<< */
+  .item-price-info {
+      font-weight: bold; /* Bold price */
+      color: #33691e; /* Green color for price */
+      flex-shrink: 0; /* Prevent shrinking */
+      text-align: right; /* Align price to the right within its flex item */
+  }
+  
+  
+  /* Optional: Add styles back if you include author */
+  /* .item-book-author { font-style: italic; color: #01579b; } */
+  
+  
+  /* Style for the order footer section (Total Price) */
+  .order-footer {
+      margin-top: 15px; /* Space above footer */
+      padding-top: 10px;
+      border-top: 1px solid #e0e0e0; /* Solid line above footer */
+      text-align: right; /* Align total price to the right */
+  }
+  
+  .order-footer .order-total {
+      margin: 0; /* Remove default margin */
+      font-size: 1.2em; /* Larger font for total */
+      font-weight: bold;
+      color: #004d40; /* Match quantity color or use a summary color */
+  }
+  
+  
+  /* Style for the horizontal rule after the entire order block */
+  /* Applied after the order-footer */
+  .order-item > .order-separator {
+      border: none;
+      height: 1px;
+      background-color: #e0e0e0;
+      margin-top: 20px; /* Space above the separator */
+      margin-bottom: 0;
+  }
+  
+  
+  /* Optional: Style for the message about old orders if you show it */
+  /*
+  .order-item.no-items-order {
+      background-color: #fff3e0; # Light orange background
+      border-color: #ffb74d;
+      color: #e65100; # Dark orange text
+      font-style: italic;
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      box-shadow: none; # No shadow for these messages
+  }
+  .order-item.no-items-order hr {
+      margin-top: 10px;
+  }
+  */
