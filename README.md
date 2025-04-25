@@ -1,15 +1,17 @@
-Web-Dev-Project
+#Web-Dev-Project
+
 Online Bookstore
 
 This is a web application project for Browse and purchasing books online. The backend is built with Django REST Framework, and the frontend is developed using Angular.
 Key Features
-    Browse Book Catalog: Users can view the list of available books.
-    View Book Details: Display detailed information about each book (title, author, price, etc.).
-    User Authentication: User registration and login functionality using JWT (JSON Web Tokens) via djangorestframework-simplejwt.
-    Shopping Cart: Users can add books to and manage their shopping cart.
-    Order Placement: Users can place orders for the books in their cart.
-    Order History: Authenticated users can view their past orders.
-    Django Admin Panel: Superusers can manage application data (books, users, orders) through the standard Django admin interface.
+
+    * Browse Book Catalog: Users can view the list of available books.
+    * View Book Details: Display detailed information about each book (title, author, price, etc.).
+    * User Authentication: User registration and login functionality using JWT (JSON Web Tokens) via djangorestframework-simplejwt.
+    * Shopping Cart: Users can add books to and manage their shopping cart.
+    * Order Placement: Users can place orders for the books in their cart.
+    * Order History: Authenticated users can view their past orders.
+    * Django Admin Panel: Superusers can manage application data (books, users, orders) through the standard Django admin interface.
 
 Technologies Used
     Backend:
