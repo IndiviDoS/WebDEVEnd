@@ -1,4 +1,4 @@
-# WebDEVEnd
+Web-Dev-Project
 Online Bookstore
 
 This is a web application project for Browse and purchasing books online. The backend is built with Django REST Framework, and the frontend is developed using Angular.
@@ -44,49 +44,51 @@ Prerequisites
     Git
 
 Backend (Django)
-Clone the repository:
 
-git clone [https://github.com/Asylzhann/Web-Dev-Project]
-cd [project]/[bookstore]
+    Clone the repository:
 
-Create and activate a virtual environment:
+    git clone [https://github.com/Asylzhann/Web-Dev-Project]
+    cd [project]/[bookstore]
 
-python -m venv venv
-# Windows
-.\venv\Scripts\activate
-# macOS/Linux
-source venv/bin/activate
+    Create and activate a virtual environment:
 
-Install dependencies:
+    python -m venv venv
+    # Windows
+    .\venv\Scripts\activate
+    # macOS/Linux
+    source venv/bin/activate
 
-pip install -r requirements.txt
+    Install dependencies:
 
-Apply migrations:
+    pip install -r requirements.txt
 
-python manage.py migrate
+    Apply migrations:
 
-Create a superuser (for admin access):
+    python manage.py migrate
 
-python manage.py createsuperuser
+    Create a superuser (for admin access):
 
-Run the Django development server:
+    python manage.py createsuperuser
 
-python manage.py runserver
+    Run the Django development server:
+
+    python manage.py runserver
 
     The backend will be available at http://127.0.0.1:8000/
 
 Frontend (Angular)
-Navigate to the frontend directory:
 
-cd [project]/[bookstore-frontend]
+    Navigate to the frontend directory:
 
-Install dependencies:
+    cd [project]/[bookstore-frontend]
 
-npm install
+    Install dependencies:
 
-Run the Angular development server:
+    npm install
 
-ng serve --open
+    Run the Angular development server:
+
+    ng serve --open
 
     The frontend will be available at http://localhost:4200/ and should open automatically in your browser.
 
