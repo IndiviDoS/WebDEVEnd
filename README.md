@@ -1,6 +1,6 @@
-##Web-Dev-Project
+## Web-Dev-Project
 
-Online Bookstore
+# Online Bookstore
 
 This is a web application project for Browse and purchasing books online. The backend is built with Django REST Framework, and the frontend is developed using Angular.
 Key Features
@@ -13,35 +13,41 @@ Key Features
     * Order History: Authenticated users can view their past orders.
     * Django Admin Panel: Superusers can manage application data (books, users, orders) through the standard Django admin interface.
 
-Technologies Used
-    Backend:
+# Technologies Used
+   Backend:
+   
         Python
         Django
         Django REST Framework (rest_framework)
         Django Simple JWT (rest_framework_simplejwt) - for authentication
         Django CORS Headers (corsheaders) - for Frontend-Backend communication
         Database (SQLite default)
-    Frontend:
+        
+   Frontend:
+   
         TypeScript
         Angular
         HTML
         CSS
-    General:
+   General:
+   
         Git / GitHub
         Python Virtual Environment (venv)
 
-Development Team
+# Development Team
+
     Makhambet Yerdaulet
     Rysbek Zhanasyl
     Zhakanov Bolat
 
-Setup and Run
+# Setup and Run
 Prerequisites
+
     Python 3.x
     Node.js and npm (or yarn)
     Git
 Backend (Django)
-    Clone the repository:
+   Clone the repository:
     
     git clone [(https://github.com/IndiviDoS/WebDEVEnd/)]
     cd
@@ -71,7 +77,7 @@ Run the Django development server:
 
     The backend will be available at http://127.0.0.1:8000/
 
-Frontend (Angular)
+# Frontend (Angular)
 
 Navigate to the frontend directory:
 
